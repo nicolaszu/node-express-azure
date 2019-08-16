@@ -12,8 +12,8 @@ describe('/GET', () => {
         chai.request(`http://localhost:${config.port}`)
             .get('/contact')
             .end((err, res) => {
-                res.should.have.status(200);
-                res.text.should.contain('Contact Us');
+                res.should.have.status(500);
+                res.text.should.contain('Contact me');
                 done();
             });
     });
